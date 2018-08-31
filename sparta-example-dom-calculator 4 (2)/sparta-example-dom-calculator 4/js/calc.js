@@ -5,7 +5,7 @@ var display = document.getElementById('screen');
 
 // make AC work
 var clear = document.getElementsByClassName('buttonClear')[0];
-clear.addEventListener("click", function functionName() {
+clear.addEventListener("click", function() {
   display.innerHTML  = "";
 });
 
@@ -38,8 +38,7 @@ for (let but = 0; but < buttons.length; but++) {
 }
 
 
-
-
+// ask about this
 // for (let button in buttons) {
 //       console.log(button.value);
 // }
