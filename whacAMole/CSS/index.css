@@ -1,0 +1,27 @@
+body{
+	background-color: lightblue;
+	/* background-image: url("../images/intro.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%; */
+}
+.img-fluid {
+  width: 100%;
+  height: auto;
+}
+#top{
+	height: 500px;
+}
+h2 {
+    text-align: center;
+}
+
+
+.col-3{
+	height: 100px;
+	border: 2px solid black;
+}
+
+.col-12{
+	height: 50px;
+	border: 2px solid black;
+}
