@@ -1,26 +1,60 @@
 $(document).ready(function(){
 
-
-  $('.mole').show(); // mole appears
-  $('.mole').animate({marginTop : -100}); // slide up
-  setTimeout(function() { //wait 2 seconds
-    $('.mole').animate({
-               marginTop : 20 // slide down
-           }, function() {
-               $('.mole').hide(); // disappear only after slide
-           });
-    }, 2000);
+  var score = 0;
+  var count = 0;
+  var missed = 0;;
+  var itterator = 1000;
 
 
 
 
 
-  $(".col-3").click(function(){
-      $(".mole").hide();
-  });
+  (function play() {
+      var interval = 1001;
+      timer = function()
+      {
+          interval = interval*0.99;
+          //do your thing here
+          var randomNumber = Math.floor(Math.random() * 8); // gets random number
+            popOut($(".mole:eq( "+ randomNumber +" )"));
+
+          if (missed <= 3) {
+              setTimeout(timer, interval);
+          }
+          else {
+            alert("Game over!");
+          }
+        };
+        $.when(timer()).done(timer());
+
+  })();
 
 
 
 
+  function popOut(aMole) {
+    count++;
+    console.log(count);
+    $('#count').html("Count: "+ count);
+    aMole.show(); // mole appearss
+    aMole.animate({marginTop: -100}); // slide up
+    setTimeout(function() { //wait 2 seconds
+      aMole.animate({
+                 marginTop : -10 // slide down
+             }, function() {
+                 aMole.hide(); // disappear only after slide
+                 missed++;
+                 $('#missed').html("Missed: "+ missed);
+             });
+      }, 2000);
+  }
 
-});
+
+    $('.mole').on('click', function(){
+      $(this).hide();
+      score++;
+      $('#score').html("Score: "+ score);
+    });
+
+
+}); // finish all

@@ -6,19 +6,18 @@ body{
 }
 
 
-#top{
-	height: 500px;
+
+#topRow{
+	margin-left: 10%;
 }
 
 
 .col-3{
 	height: 130px;
-	border: 2px solid black;
 }
 
 .col-12{
 	height: 150px;
-	border: 2px solid black;
 }
 
 .img-fluid {
@@ -27,14 +26,15 @@ body{
 }
 
 .dirt{
-	z-index: 5;
+	z-index: 2;
 	position: absolute;
-
+	width: 80%;
 }
 
 .mole{
 	/* height: 100%; */
 	z-index: 1;
 	position: absolute;
+	height: 80%;
 	display: none;
 }
