@@ -1,0 +1,40 @@
+body{
+	background-color: lightblue;
+	/* background-image: url("../images/intro.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%; */
+}
+
+
+#top{
+	height: 500px;
+}
+
+
+.col-3{
+	height: 130px;
+	border: 2px solid black;
+}
+
+.col-12{
+	height: 150px;
+	border: 2px solid black;
+}
+
+.img-fluid {
+  width: 100%;
+  height: 100%;
+}
+
+.dirt{
+	z-index: 5;
+	position: absolute;
+
+}
+
+.mole{
+	/* height: 100%; */
+	z-index: 1;
+	position: absolute;
+	display: none;
+}
