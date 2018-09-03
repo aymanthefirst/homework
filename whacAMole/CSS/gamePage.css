@@ -23,5 +23,18 @@ body{
 
 .img-fluid {
   width: 100%;
-  height: auto;
+  height: 100%;
+}
+
+.dirt{
+	z-index: 5;
+	position: absolute;
+
+}
+
+.mole{
+	/* height: 100%; */
+	z-index: 1;
+	position: absolute;
+	display: none;
 }
