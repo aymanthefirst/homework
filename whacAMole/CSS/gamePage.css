@@ -47,3 +47,7 @@ h2{
 	text-align: center;
 	display: none;
 }
+
+#topScoreRow{
+		display: none;
+}

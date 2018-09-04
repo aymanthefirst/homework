@@ -5,7 +5,11 @@ $(document).ready(function(){
   var missed = 0;
   var speed = 2500; // speed at which moles pop up
   var slideSpeed = 1000; // time moles stay up for
-  var time = 40000; // 40 seconds
+  var time = 10000; // 40 seconds
+
+
+  // get the text
+  var text = $('#score').text();
 
 startTimer(); // stats countdown for 40 seconds
 popOut(); // mole pops out
@@ -49,6 +53,13 @@ function popOut(){
   if (time <= 2000) { // if time is up
     $('#gameOverRow').show(); // displayes game over in html page
 
+    //set the item in localStorage
+    if (localStorage.getItem('score')< score) {
+      localStorage.setItem('score', score);
+      document.getElementById('topScoreRow').innerHTML = ("Congratulations, you have the new high score!");
+    }
+    $('#topScore').html(localStorage.getItem('score'));
+    $('#topScoreRow').show();
   }
   else {
       setTimeout(popOut, speed); // invokes itself to go again at a faster speed (slideSpeed = slideSpeed -50)
@@ -64,6 +75,7 @@ function popOut(){
   $('#restart').on('click', function(){ // when the restart button is clicked
     location.reload();  // all is set back to the beginning
   });
+
 
 
 }); // finish all
