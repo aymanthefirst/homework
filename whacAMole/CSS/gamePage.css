@@ -1,0 +1,49 @@
+body{
+	background-color: lightblue;
+	/* background-image: url("../images/intro.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%; */
+}
+
+#topRow{
+	margin-left: 10%;
+	height: 200px;
+}
+
+.col-3{
+	height: 130px;
+}
+
+.col-12{
+	height: 150px;
+}
+
+.img-fluid {
+  width: 100%;
+  height: 100%;
+}
+
+.dirt{
+	z-index: 2;
+	position: absolute;
+	width: 80%;
+}
+
+.mole{
+	height: 100%;
+	z-index: 1;
+	position: absolute;
+	height: 100%;
+	display: none;
+}
+
+h2{
+	font-family: "impact";
+}
+
+#gameOverRow{
+	font-family: "impact";
+	font-size: 100%;
+	text-align: center;
+	display: none;
+}
