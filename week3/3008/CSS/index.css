@@ -1,0 +1,19 @@
+#div1{
+	padding: 50px;
+	background-color: darkblue;
+	border:2px solid black;
+}
+#div2{
+	/* width: : 50%;
+	height: 50%; */
+	padding: 50px;
+	background-color: purple;
+	border:2px solid black;
+}
+#div3{
+	/* width: : 50%;
+	height: 50%; */
+	padding: 50px;
+	background-color: blue;
+	border:2px solid black;
+}
