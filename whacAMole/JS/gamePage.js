@@ -76,6 +76,8 @@ function popOut(){
     location.reload();  // all is set back to the beginning
   });
 
-
+  $('body').on('click', function() {// when mouse is clicked anywhere
+    cursor.rotate()
+  })
 
 }); // finish all

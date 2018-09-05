@@ -1,8 +1,6 @@
 body{
 	background-color: lightblue;
-	/* background-image: url("../images/intro.jpg");
-	background-repeat: no-repeat;
-	background-size: 100%; */
+	cursor: url('../hammer.png') 150 15,auto;
 }
 
 #topRow{
@@ -39,6 +37,7 @@ body{
 
 h2{
 	font-family: "impact";
+	color: brown;
 }
 
 #gameOverRow{

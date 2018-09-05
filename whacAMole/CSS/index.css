@@ -1,8 +1,5 @@
 body{
 	background-color: lightblue;
-	/* background-image: url("../images/intro.jpg");
-	background-repeat: no-repeat;
-	background-size: 100%; */
 }
 
 .img-fluid {
@@ -57,8 +54,30 @@ h2 {
 }
 
 body{
-  /* Change the cursors picture by changing the url link, can be a relative or absolute link */
-  cursor: url('../hammer.png'), auto;
-	/* background-color: red */
-/* background-image: url('../hammer.png'); */
+  cursor: url('../hammer.png') 150 15,auto;
+}
+
+p3{
+	color: white;
+}
+
+#instructions{
+	position: absolute;
+	height: 200px;
+	width: 250px;
+	margin-top: 100px;
+	padding-left: 5%;
+}
+
+.font{
+	font-family: verdana, sans-serif;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-align: left;
+}
+
+h3{
+	color: darkBlue;
 }
