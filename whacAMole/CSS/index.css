@@ -55,3 +55,10 @@ h2 {
 	height: 100px;
 	width: 100px;
 }
+
+body{
+  /* Change the cursors picture by changing the url link, can be a relative or absolute link */
+  cursor: url('../hammer.png'), auto;
+	/* background-color: red */
+/* background-image: url('../hammer.png'); */
+}
