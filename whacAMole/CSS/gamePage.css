@@ -14,6 +14,13 @@ body:active{
 #restart:hover{
 		cursor: url('../hammer.png') 150 15,auto !important;
 }
+#restart:focus{
+	cursor: url('../hammer90.png') 150 15,auto !important;
+}
+
+#restart:active{
+	cursor: url('../hammer90.png') 150 15,auto !important;
+}
 
 #topRow{
 	margin-left: 10%;
