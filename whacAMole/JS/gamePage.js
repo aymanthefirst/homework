@@ -5,7 +5,7 @@ $(document).ready(function(){
   var missed = 0;
   var speed = 2500; // speed at which moles pop up
   var slideSpeed = 1000; // time moles stay up for
-  var time = 40000; // 40 seconds
+  var time = 4000; // 40 seconds
   var randomNumber = 0;
   var lastRandomNumber = 0;
 
@@ -70,7 +70,7 @@ function popOut(){
       $('#gameOver').html("<h2>Congratulations, you have the new high score!</h2>");
     }
     $('#topScore').html(localStorage.getItem('score'));
-    $('#topScoreRow').show();
+
   }
   else {
       setTimeout(popOut, speed); // invokes itself to go again at a faster speed (slideSpeed = slideSpeed -50)
