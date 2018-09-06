@@ -5,8 +5,9 @@ $(document).ready(function(){
   var missed = 0;
   var speed = 2500; // speed at which moles pop up
   var slideSpeed = 1000; // time moles stay up for
-  var time = 5000; // 40 seconds
-
+  var time = 40000; // 40 seconds
+  var randomNumber = 0;
+  var lastRandomNumber = 0;
 
   // get the text
   var text = $('#score').text();
@@ -26,12 +27,14 @@ function startTimer(){
 
 
 function popOut(){
-  if  (time <= 1000) { // at the end of the game
+  if  (time <= 2000) { // at the end of the game
     $('.mole').stop(); // stop all animations
   }
-  else { // if it is not the end of the game
-    var randomNumber = Math.floor(Math.random() * 8); // random number from 0 to 8, rounded down.
+  else {
+    console.log("one just popped out");
+    randomNumber = Math.floor(Math.random() * 8); // random number from 0 to 8, rounded down.
     aMole = $(".mole:eq( "+ randomNumber +" )"); // specific index in mole
+    randomNumber = lastRandomNumber;
     count++;
     missed = count - score -1; // updates missed
     $('#missed').html(missed);  // prints missed to html file
@@ -49,6 +52,14 @@ function popOut(){
 
       speed = speed - 8; // best number after testing speeds
       slideSpeed = slideSpeed -50; // best number after testing speeds
+      aMole.attr('src', 'images/mole.svg');
+      aMole.on('click', function(){ // when a mole is clicked
+        aMole.attr('src', 'images/squished.png');
+        aMole.stop(true).fadeOut(1000);
+        score++;
+        $('#score').html(score);// display score in html file
+      });
+
   }
   if (time <= 2000) { // if time is up
     $('#gameOverRow').show(); // displayes game over in html page
@@ -66,16 +77,14 @@ function popOut(){
   }
 }
 
-  $('.mole').on('click', function(){ // when a mole is clicked
-    $(this).hide(); // mole diappears
-    score++;
-    $('#score').html(score);// display score in html file
-  });
+
+
+
 
   $('#restart').on('click', function(){ // when the restart button is clicked
     location.reload();  // all is set back to the beginning
   });
 
-  
+
 
 }); // finish all

@@ -7,7 +7,7 @@ body:focus{
 	cursor: url('../hammer90.png') 150 15,auto !important;
 }
 
-body:active{
+/* body:active{ */
 	cursor: url('../hammer90.png') 150 15,auto !important;
 }
 
