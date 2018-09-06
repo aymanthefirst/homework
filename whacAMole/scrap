@@ -33,3 +33,36 @@ function popOut(aMole) {
       }, 2000);
     }
   }
+
+
+
+
+
+
+
+
+
+
+
+..........................................
+
+  <div id="gameOverBox" class="row">
+    <div class="row">
+      <div class="col-12 gameOverRow">
+        <h2 id="gameOver">Game Over!!</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 gameOverRow">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 gameOverRow">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 gameOverRow">
+        <button id="restart" type="button" name="Restart">Restart</button>
+      </div>
+    </div>
+  </div>

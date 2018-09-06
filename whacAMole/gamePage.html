@@ -19,29 +19,45 @@
 </head>
 
 <body>
-	<!-- row -->
-	<div class="row" id="topRow">
-		<div class="col-6">
-			<h2>Score: <span id="score">0</span></h2>
-			<br>
-			<h2>Missed: <span id="missed">0</span></h2>
+
+	<div class="row">
+		<div class="col-3">
+			<div class="topBox">
+				<h2>Score: <span id="score">0</span></h2>
+				<br>
+				<h2>Missed: <span id="missed">0</span></h2>
+			</div>
+
 		</div>
-		<div id="topRight" class="col-6">
-			<h2>Top score: <span id="topScore">0</span></h2>
-			<br>
-			<h2>Time left: <span id="time">0</span></h2>
+		<div class="col-3">	</div>
+		<div class="col-3">	</div>
+
+
+		<div class="col-3">
+			<div class="topBox">
+				<h2>Top score: <span id="topScore">0</span></h2>
+				<br>
+				<h2>Time left: <span id="time">0</span></h2>
+			</div>
+
 		</div>
-	</div>
-	<div id="gameOverRow" class="row">
-		<!-- <div class="col-12">
-			<h2 id="gameOver">Game Over!!</h2>
-			<br>
-			<button id="restart" type="button" name="Restart">Restart</button>
-		</div> -->
 	</div>
 
+	<div id="gameOverBox">
+		<h2 id="gameOver">Game Over!!</h2>
+		<div id="leaderTable" class="">
+			<h2>First: <span id="first">0</span></h2>
+			<h2>Second: <span id="second">0</span></h2>
+			<h2>Third: <span id="third">0</span></h2>
+		</div>
+	<h3 id="leaderBoard" class="button"> LeaderBoard</h3>
+	<a id="backToStart" href="index.html"> <h3 class="button">Back to start</h3></a>
+	<h3 class="button" id="restart"> Restart</h3>
+
+</div>
+
 	<!-- row -->
-	<div id="2" class="row">
+	<div id="row2" class="row">
 		<div class="col-3">
 			<img src="images/dirt.svg" class="img-fluid dirt flip
 			" alt="">

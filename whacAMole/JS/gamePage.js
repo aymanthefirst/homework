@@ -5,9 +5,11 @@ $(document).ready(function(){
   var missed = 0;
   var speed = 2500; // speed at which moles pop up
   var slideSpeed = 1000; // time moles stay up for
-  var time = 4000; // 40 seconds
+  var time = 10000; // 40 seconds
   var randomNumber = 0;
   var lastRandomNumber = 0;
+  $('#topScore').html(localStorage.getItem('score'));
+
 
   // get the text
   var text = $('#score').text();
@@ -62,12 +64,35 @@ function popOut(){
 
   }
   if (time <= 2000) { // if time is up
-    $('#gameOverRow').show(); // displayes game over in html page
+    $('#gameOverBox').show(); // displayes game over in html page
 
     //set the item in localStorage
-    if (localStorage.getItem('score')< score) {
+    if (localStorage.getItem('score')< score &&
+        score !== localStorage.getItem('first') &&
+        score !== localStorage.getItem('second') &&
+        score !== localStorage.getItem('third'))
+    {
+      localStorage.setItem('third', localStorage.getItem('second'));
+      localStorage.setItem('second', localStorage.getItem('score'));
       localStorage.setItem('score', score);
-      $('#gameOver').html("<h2>Congratulations, you have the new high score!</h2>");
+      $('#gameOver').html('<h2 "id=gameOver">Congratulations, you have a new high score!</h2>');
+    }
+    else if (localStorage.getItem('second') < score &&
+    score !== localStorage.getItem('first') &&
+    score !== localStorage.getItem('second') &&
+    score !== localStorage.getItem('third'))
+ {
+      localStorage.setItem('third', localStorage.getItem('second'));
+      localStorage.setItem('second', score);
+      $('#gameOver').html('<h2 "id=gameOver">Congratulations, you have a new high score!</h2>');
+    }
+    else if (localStorage.getItem('third') < score &&
+    score !== localStorage.getItem('first') &&
+    score !== localStorage.getItem('second') &&
+    score !== localStorage.getItem('third'))
+ {
+      localStorage.setItem('third', score);
+      $('#gameOver').html('<h2 "id=gameOver">Congratulations, you have a new high score!</h2>');
     }
     $('#topScore').html(localStorage.getItem('score'));
 
@@ -85,6 +110,12 @@ function popOut(){
     location.reload();  // all is set back to the beginning
   });
 
-
+  $('#leaderBoard').on('click', function(){
+    // setting leaderboard
+    $('#first').html(localStorage.getItem('score'));
+    $('#second').html(localStorage.getItem('second'));
+    $('#third').html(localStorage.getItem('third'));
+    $('#leaderTable').show();
+  });
 
 }); // finish all
