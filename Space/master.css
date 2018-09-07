@@ -1,0 +1,31 @@
+body{
+  background-image: url("images/universe.jpg");
+  background-size: 100%;
+}
+
+#navbar-brand{
+
+}
+
+#universe{
+  width: 100%;
+  margin: 0 50px;
+
+}
+
+h1{
+color: white;
+}
+
+#earth{
+  height: 100px;
+}
+
+#earth2{
+  padding-top: 20%;
+  padding-left: 20%;
+}
+
+a{
+  color: white;
+}
