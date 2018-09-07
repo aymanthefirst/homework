@@ -1,27 +1,27 @@
 body{
 	background-color: lightblue;
-	cursor: url('../hammer.png') 150 15,auto !important;
+	cursor: url('../images/hammer.png') 150 15,auto !important;
 	background-image: url("../images/gamePage.jpg");
 	background-size: 100%;
 }
 
 body:focus{
-	cursor: url('../hammer90.png') 150 15,auto !important;
+	cursor: url('../images/hammer90.png') 150 15,auto !important;
 }
 
 body:active{
-	cursor: url('../hammer90.png') 150 15,auto !important;
+	cursor: url('../images/hammer90.png') 150 15,auto !important;
 }
 
 #restart:hover{
-		cursor: url('../hammer.png') 150 15,auto !important;
+		cursor: url('../images/hammer.png') 150 15,auto !important;
 }
 #restart:focus{
-	cursor: url('../hammer90.png') 150 15,auto !important;
+	cursor: url('../images/hammer90.png') 150 15,auto !important;
 }
 
 #restart:active{
-	cursor: url('../hammer90.png') 150 15,auto !important;
+	cursor: url('../images/hammer90.png') 150 15,auto !important;
 }
 
 #topRow{
@@ -117,7 +117,7 @@ font-size: 60px;
 .button{
 	border: 1px solid black;
 	background-color: blue;
-	color: black;
+color: #ace12f;
 }
 
 .button:hover{
