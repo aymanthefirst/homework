@@ -1,5 +1,6 @@
 require "sinatra"
-
-require_relative "./controllers/app.rb"
-
-run HiSinatra
+require "sinatra/reloader" if development?
+require_relative "./controllers/post_controller.rb"
+use Rack::Reloader
+use Rack::MethodOverride
+run PostController
